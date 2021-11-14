@@ -89,6 +89,7 @@ p {
 
 img {
   max-width: 100%;
+  max-height: 100%;
 }
 textarea,
 input[type="text"],
@@ -660,7 +661,7 @@ input::-ms-input-placeholder {
 }
 /*heading title all area*/
 .head_title {
-  margin-bottom: 90px;
+  /*margin-bottom: 30px;*/
 }
 .head_title h3 {
   color: #413d4b;
@@ -806,69 +807,34 @@ input::-ms-input-placeholder {
 }
 
 /*==================================================================
-            History section Style
+            History section Style(스케줄)
 ====================================================================*/
-.main_history {
-}
-.main_history .single_history_content .head_title h2 {
-  border-left: 6px solid #e74c3c;
-  padding-left: 30px;
+
+.main_history .single_history_content .head_title {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-bottom: 10px;
+  border-bottom: 3px solid #e74c3c;
 }
 
-/*==================================================================
-            service section Style
-====================================================================*/
-.main_service .head_title {
-  padding: 100px 0px 40px 0px;
-  margin-bottom: 0px;
-}
-.main_service .head_title h2 {
-  margin-right: 12%;
-  border-right: 6px solid #e74c3c;
-  color: #fff;
-  padding-right: 5%;
-}
-.main_service .single_service_img {
-  position: relative;
-  height: 676px;
-}
-.main_service .single_service_img img {
-  width: 100%;
-  height: 100%;
+
+
+
+.main_history .single_history_content .historytitle{
+  border: 1px solid #e74c3c;
+  font-size: 20px;
+  background-color: #edebeb;
+  
 }
 
-.main_service .single_service.single_service_text {
-  margin-right: 0px;
-  background: #202020;
-}
-.main_service .single_service.single_service_text .single_service_icon i {
-  background: #f4f5f9;
-  width: 70px;
-  height: 70px;
-  line-height: 70px;
-  text-align: center;
-  color: #e74c3c;
-  position: relative;
-  z-index: 9;
-  border: 5px solid rgba(0, 0, 0, 0.2);
-  border-radius: 50%;
-  font-size: 1.875rem;
+.main_history .single_history_content .historytitle ul li{
+  margin-top: 10px;
+  border-bottom: 1px solid #e74c3c;
 }
 
-.main_service .single_service.single_service_text .single_service_right_text {
-  width: 96%;
-}
-.main_service
-  .single_service.single_service_text
-  .single_service_right_text
-  h4 {
-  color: #e74c3c;
-}
-.main_service .single_service.single_service_text .single_service_right_text p {
-  color: #999999;
-  font-family: "Source Sans Pro", sans-serif;
-  font-weight: 400;
-}
+
+
 /*======================================================================
                     portfolio section css
 ========================================================================*/
@@ -939,7 +905,9 @@ button.btn-md:hover {
 
 .single_portfolio {
   position: relative;
+  padding: 5px;
 }
+
 .single_portfolio:hover .grid_item_overlay {
   opacity: 1;
 }
@@ -980,42 +948,6 @@ button.btn-md:hover {
   background: #fff;
 }
 
-/*========================================================================
-                    Study Section Css
-==========================================================================*/
-.study {
-  background: #f4f5f9;
-}
-.main_study_area {
-  overflow: hidden;
-}
-.slick-active {
-  outline: none;
-}
-.single_study_text {
-  background: #fff;
-  position: absolute;
-  right: -15%;
-  top: 85px;
-  width: 100%;
-  z-index: 9;
-  padding: 10% 20%;
-}
-.single_study_text .s_study_icon {
-  background: #e74c3c;
-  width: 60px;
-  height: 60px;
-  line-height: 60px;
-  color: #fff;
-  transform: rotate(45deg);
-  margin: 30px auto;
-}
-.single_study_text .s_study_icon i {
-  transform: rotate(-45deg);
-}
-.single_study_right_img {
-  position: relative;
-}
 
 /*=====================================================================
                     counter section css
@@ -1068,17 +1000,38 @@ button.btn-md:hover {
 .single_pricing:hover {
   box-shadow: 0px 1px 10px 1px #ccc;
 }
+
+
+
 .pricing_business .pricing_head {
-  background: #e74c3c;
-}
-.pricing_business .pricing_head .p_r {
-  color: #e74c3c;
+  background: #e61e2b;
 }
 .pricing_business .pricing_head h3 {
   color: #fff;
 }
 .pricing_business .btn-md {
-  background: #e74c3c;
+  background: #e61e2b;
+}
+
+
+.pricing_business2 .pricing_head {
+  background: #294197;
+}
+.pricing_business2 .pricing_head h3{
+  color:#fff;
+}
+.pricing_business2 .btn-md{
+  background: #294197;
+}
+
+.pricing_business3 .pricing_head {
+  background: #ffca2c;
+}
+.pricing_business3 .pricing_head h3{
+  color:#fff;
+}
+.pricing_business3 .btn-md{
+  background: #ffca2c;
 }
 
 .pricing_head {
@@ -1289,25 +1242,6 @@ li .single_team_text p {
   transform: rotate(0deg);
 }
 
-/*====================================================================
-                        clogo section css
-======================================================================*/
-.clogo {
-  background: #f4f5f9;
-}
-.main_clogo {
-  overflow: hidden;
-}
-.main_clogo a {
-  height: 100px;
-  display: inline-block;
-  width: 100%;
-  overflow: hidden;
-  line-height: 100px;
-  background: #fff;
-  margin-bottom: 30px;
-  box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 0.25);
-}
 
 /*=================================================================
                             Blog Section
