@@ -50,7 +50,7 @@ img {
   -ms-user-select: none;
   user-select: none;
   -webkit-user-drag: none;
-  user-drag: none;
+  
 }
 a,
 a:hover,
@@ -575,8 +575,6 @@ input::-ms-input-placeholder {
   color: #e74c3c;
   background: transparent;
 }
-.main_menu_bg .navbar {
-}
 
 .main_menu_bg .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
@@ -660,9 +658,7 @@ input::-ms-input-placeholder {
   overflow: hidden;
 }
 /*heading title all area*/
-.head_title {
-  /*margin-bottom: 30px;*/
-}
+
 .head_title h3 {
   color: #413d4b;
 }
@@ -775,10 +771,7 @@ input::-ms-input-placeholder {
             Feature section Style
 ====================================================================*/
 
-.main_feature {
-}
-.main_feature .single_feature {
-}
+
 .main_feature .single_feature:hover .single_feature_icon {
   border-color: #e74c3c;
   transform: rotate(45deg);
@@ -1071,8 +1064,7 @@ button.btn-md:hover {
   background: #f4f5f9;
   padding: 80px 0px 30px 0px;
 }
-.single_pricing ul {
-}
+
 .single_pricing ul li {
   line-height: 45px;
   height: 45px;
@@ -1126,7 +1118,7 @@ button.btn-md:hover {
 .main_team ul li:nth-child(1) {
   width: 15%;
   display: inline-block;
-  float: left;
+  
   margin-left: 3%;
   position: absolute;
   left: 1%;
@@ -1135,7 +1127,7 @@ button.btn-md:hover {
 .main_team ul li:nth-child(2) {
   width: 15%;
   display: inline-block;
-  float: left;
+  
   margin-left: 3%;
   position: absolute;
   left: 19%;
@@ -1144,7 +1136,7 @@ button.btn-md:hover {
 .main_team ul li:nth-child(3) {
   width: 15%;
   display: inline-block;
-  float: left;
+  
   margin-left: 3%;
   position: absolute;
   left: 37%;
@@ -1153,7 +1145,7 @@ button.btn-md:hover {
 .main_team ul li:nth-child(4) {
   width: 15%;
   display: inline-block;
-  float: left;
+  
   margin-left: 3%;
   position: absolute;
   left: 55%;
@@ -1162,7 +1154,7 @@ button.btn-md:hover {
 .main_team ul li:nth-child(5) {
   width: 15%;
   display: inline-block;
-  float: left;
+  
   margin-left: 3%;
   position: absolute;
   left: 73%;
