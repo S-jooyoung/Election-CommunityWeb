@@ -50,7 +50,6 @@ img {
   -ms-user-select: none;
   user-select: none;
   -webkit-user-drag: none;
-  
 }
 a,
 a:hover,
@@ -543,6 +542,40 @@ input::-ms-input-placeholder {
   width: 100%;
   overflow: hidden;
 }*/
+/* navbar2 section*/
+.main_menu_bg2 {
+  margin-top: 0px;
+  background-color: transparent;
+}
+.main_menu_bg2 .navbar-default {
+  background-color: transparent;
+  border-color: transparent;
+  transition: all 0.6s;
+  margin: 15px auto;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: #e74c3c;
+  background: transparent;
+}
+
+.main_menu_bg2 .navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  color: #e74c3c;
+  padding-bottom: 22px;
+  border-bottom: 1px solid #e74c3c;
+  background: transparent;
+}
+
+.main_menu_bg2 .navbar-nav > li > a {
+  padding-top: 15px;
+  padding-bottom: 20px;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  color: #000000;
+}
+
 /* navbar section */
 .menu-scroll {
   padding-top: 0px;
@@ -560,6 +593,7 @@ input::-ms-input-placeholder {
   transition: all 0.3s;
   height: 75px;
 }
+
 .main_menu_bg {
   margin-top: 0px;
   background-color: transparent;
@@ -771,7 +805,6 @@ input::-ms-input-placeholder {
             Feature section Style
 ====================================================================*/
 
-
 .main_feature .single_feature:hover .single_feature_icon {
   border-color: #e74c3c;
   transform: rotate(45deg);
@@ -811,22 +844,16 @@ input::-ms-input-placeholder {
   border-bottom: 3px solid #e74c3c;
 }
 
-
-
-
-.main_history .single_history_content .historytitle{
+.main_history .single_history_content .historytitle {
   border: 1px solid #e74c3c;
   font-size: 20px;
   background-color: #edebeb;
-  
 }
 
-.main_history .single_history_content .historytitle ul li{
+.main_history .single_history_content .historytitle ul li {
   margin-top: 10px;
   border-bottom: 1px solid #e74c3c;
 }
-
-
 
 /*======================================================================
                     portfolio section css
@@ -941,7 +968,6 @@ button.btn-md:hover {
   background: #fff;
 }
 
-
 /*=====================================================================
                     counter section css
 =======================================================================*/
@@ -994,8 +1020,6 @@ button.btn-md:hover {
   box-shadow: 0px 1px 10px 1px #ccc;
 }
 
-
-
 .pricing_business .pricing_head {
   background: #e61e2b;
 }
@@ -1006,24 +1030,23 @@ button.btn-md:hover {
   background: #e61e2b;
 }
 
-
 .pricing_business2 .pricing_head {
   background: #294197;
 }
-.pricing_business2 .pricing_head h3{
-  color:#fff;
+.pricing_business2 .pricing_head h3 {
+  color: #fff;
 }
-.pricing_business2 .btn-md{
+.pricing_business2 .btn-md {
   background: #294197;
 }
 
 .pricing_business3 .pricing_head {
   background: #ffca2c;
 }
-.pricing_business3 .pricing_head h3{
-  color:#fff;
+.pricing_business3 .pricing_head h3 {
+  color: #fff;
 }
-.pricing_business3 .btn-md{
+.pricing_business3 .btn-md {
   background: #ffca2c;
 }
 
@@ -1118,7 +1141,7 @@ button.btn-md:hover {
 .main_team ul li:nth-child(1) {
   width: 15%;
   display: inline-block;
-  
+
   margin-left: 3%;
   position: absolute;
   left: 1%;
@@ -1127,7 +1150,7 @@ button.btn-md:hover {
 .main_team ul li:nth-child(2) {
   width: 15%;
   display: inline-block;
-  
+
   margin-left: 3%;
   position: absolute;
   left: 19%;
@@ -1136,7 +1159,7 @@ button.btn-md:hover {
 .main_team ul li:nth-child(3) {
   width: 15%;
   display: inline-block;
-  
+
   margin-left: 3%;
   position: absolute;
   left: 37%;
@@ -1145,7 +1168,7 @@ button.btn-md:hover {
 .main_team ul li:nth-child(4) {
   width: 15%;
   display: inline-block;
-  
+
   margin-left: 3%;
   position: absolute;
   left: 55%;
@@ -1154,7 +1177,7 @@ button.btn-md:hover {
 .main_team ul li:nth-child(5) {
   width: 15%;
   display: inline-block;
-  
+
   margin-left: 3%;
   position: absolute;
   left: 73%;
@@ -1233,7 +1256,6 @@ li .single_team_text p {
   border-radius: 0px;
   transform: rotate(0deg);
 }
-
 
 /*=================================================================
                             Blog Section
@@ -1407,4 +1429,191 @@ li .single_team_text p {
 #countdown div {
   display: inline-block;
   margin: 0 34px;
+}
+/*=====================================================================
+                    board-list section css
+=======================================================================*/
+
+.promise-list-wrap {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.list-box {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.list-box > ul > li {
+  display: flex;
+  border-bottom: 1px solid #ccc;
+}
+.list-box > ul > li > div {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.list-box > ul > li > div.no {
+  width: 10%;
+}
+.list-box > ul > li > div.subject {
+  width: 70%;
+}
+.list-box > ul > li > div.date {
+  width: 20%;
+}
+
+.list-box > ul.list-hd > li > div {
+  border-top: 3px solid #000;
+}
+
+.list-box > ul.list-hd > li > div {
+  font-size: 21px;
+  font-weight: 600;
+}
+.list-box > ul.list-bd > li > div.subject {
+  text-align: left;
+}
+
+.list-btn {
+  text-align: right;
+  margin: 20px 0;
+}
+.list-btn a {
+  display: inline-block;
+  background: #000;
+  color: #fff;
+  line-height: 40px;
+  padding: 0 20px;
+  font-size: 15px;
+}
+
+.paging > ul {
+  display: flex;
+  justify-content: center;
+}
+.paging > ul > li {
+  margin: 0 5px;
+}
+.paging > ul > li > a {
+  font-size: 17px;
+  border: 1px solid #000;
+  display: block;
+  line-height: 30px;
+  padding: 0 10px;
+}
+.paging > ul > li:first-child a {
+  color: green;
+}
+.paging > ul > li:last-child a {
+  color: green;
+}
+.paging > ul > li.on > a {
+  font-weight: 600;
+  color: red;
+  border: 1px solid red;
+}
+.paging > ul > li:hover a {
+  color: red;
+  border: 1px solid red;
+}
+
+/*=====================================================================
+                    board-list section css
+=======================================================================*/
+
+.board-wrap {
+  max-width: 1200px;
+  height: 1000px;
+  margin: 0 auto;
+  padding: 10px;
+  margin-top: 50px;
+}
+
+.board-wrap p {
+  font-size: 15px;
+}
+
+.board-wrap .board-title {
+  display: flex;
+  align-items: center;
+  height: 5%;
+  width: 100%;
+  margin-bottom: 30px;
+}
+.board-wrap .board-title p {
+  width: 10%;
+  text-align: center;
+}
+.board-wrap .board-title span {
+  display: block;
+  width: 90%;
+  height: 100%;
+}
+
+.board-wrap .board-content textarea {
+  width: 100%;
+}
+
+.board-wrap .board-title input {
+  border: 1px solid #999;
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+}
+
+.board-wrap .board-content {
+  display: flex;
+  align-items: center;
+
+  margin-bottom: 30px;
+}
+
+.board-wrap .board-upload {
+  display: flex;
+  height: 5%;
+}
+
+.board-wrap .board-upload span {
+  display: block;
+  width: 90%;
+}
+.board-wrap .board-upload input {
+  width: 100%;
+  padding: 10px;
+  background: #f5f5f5;
+  border: 1px solid #999;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.board-wrap .board-button {
+  text-align: center;
+  font-size: 15px;
+  margin-top: 15px;
+}
+
+.board-wrap .board-button button {
+  margin: 10px;
+}
+.board-wrap .board-button button:first-child {
+  border: 1px solid #999;
+  padding: 20px 40px;
+  color: #999;
+}
+
+.board-wrap .board-button button:first-child:hover {
+  color: #f78928;
+  border: 1px solid #f78928;
+}
+
+.board-wrap .board-button button:last-child {
+  border: 1px solid #999;
+  padding: 20px 40px;
+  color: #999;
+}
+
+.board-wrap .board-button button:last-child:hover {
+  color: #f78928;
+  border: 1px solid #f78928;
 }
