@@ -39,6 +39,37 @@
   <link rel="stylesheet" href="assets/css/responsive.css" />
 
   <script src="assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+
+  <!-- fullcalendar CDN -->
+  <link href='https://cdn.jsdelivr.net/npm/fullcalendar@5.8.0/main.min.css' rel='stylesheet' />
+  <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.8.0/main.min.js'></script>
+  <!-- fullcalendar 언어 CDN -->
+  <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.8.0/locales-all.min.js'></script>
+
+  
+  
+  <script>
+
+    document.addEventListener('DOMContentLoaded', function() {
+      var calendarEl = document.getElementById('calendar');
+      var calendar = new FullCalendar.Calendar(calendarEl, {
+        initialView: 'dayGridMonth',
+
+        events:[
+          {
+            title : '[윤석열] 12시 30분 광화문',
+            start : "2021-12-01",
+            
+          },
+          {
+            title : '[이재명] 12시 20분 동성로 중앙무대',
+            start : "2021-12-03"
+          }
+        ]
+      });
+      calendar.render();
+    });
+  </script>
 </head>
 
 <body data-spy="scroll" data-target=".navbar-collapse">
@@ -188,36 +219,20 @@
     <!--End of feature Section (서브 메뉴 끝)-->
     <hr />
 
+    
+    </style>
     <!-- History section (스케줄)-->
     <section id="history" class="history sections">
       <div class="container">
         <div class="row">
           <div class="main_history">
-            <div class="col-sm-6">
-              <div class="single_history_img">
-                <img src="https://cdn.pixabay.com/photo/2017/06/10/06/39/calender-2389150_1280.png" alt="" />
-              </div>
+            <div class="col-sm-12">
+              
+                <div id="calendar"></div>
+              
             </div>
 
-            <div class="col-sm-6">
-              <div class="single_history_content">
-                <div class="head_title">
-                  <h2>최근 스케줄</h2>
-                  <a href="" class="btn btn-lg">캘린더로 보기</a>
-                </div>
-                <div class="historytitle">
-                  <ul>
-                    <li><span>이재명</span> 대구 동성로 집회 참가 2021-01-08</li>
-                    <li><span>윤석열</span> 서울 강남구 집회 참가 2021-01-08</li>
-                    <li><span>안철수</span> 부산 해운대구 집회 참가 2021-01-08</li>
-                    <li><span>심상정</span> 경기도 포천 집회 참가 2021-01-08</li>
-                  </ul>
-                </div>
-
-
-
-              </div>
-            </div>
+            
           </div>
         </div>
         <!--End of row -->
@@ -375,8 +390,10 @@
     </section>
     <!-- End off Portfolio Section (공약 끝) -->
 
+    <hr />
 
     <!-- Counter Section (여분 혹시 몰라서)-->
+    <!--
     <section id="counter" class="counter">
       <div class="video_overlay">
         <div class="container">
@@ -429,8 +446,9 @@
           </div>
         </div>
       </div>
-      <!-- End off container -->
+      
     </section>
+    -->
     <!-- End of counter section -->
 
     <!-- Pricing Section (비하인드) -->
@@ -521,6 +539,8 @@
     </section>
     <!-- End off Pricing Section (비하인드 끝)-->
 
+    <hr />
+
     <!-- Team Section (게시판)-->
     <section id="team" class="team">
       <div class="main_team_area">
@@ -598,7 +618,7 @@
     </section>
     <!-- End off Team Section(게시판 끝) -->
 
-
+    <hr />
 
     <!-- Blog Section (투표)-->
     <section id="blog" class="blog">
@@ -734,119 +754,8 @@
     </section>
     <!-- End off Blog Section(투표 끝) -->
 
-
-    <!-- contact section (문의)-->
-    <section id="contact" class="contact">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12">
-            <div class="contact_contant sections">
-              <div class="head_title text-center">
-                <h2>kEEP IN TOUCH</h2>
-                <div class="subtitle">
-                  Nullam sit amet odio eu est aliquet euismod a a urna. Proin
-                  eu urna suscipit, dictum quam nec.
-                </div>
-                <div class="separator"></div>
-              </div>
-              <!-- End off Head_title -->
-              <div class="row">
-                <div class="col-sm-6">
-                  <div class="main_contact_info">
-                    <div class="row">
-                      <div class="
-                            contact_info_content
-                            padding-top-90 padding-bottom-60
-                            p_l_r
-                          ">
-                        <div class="col-sm-12">
-                          <div class="single_contact_info">
-                            <div class="single_info_text">
-                              <h3>OUR ADDRESS</h3>
-                              <h4>
-                                House #13, Streat road, Sydney 2310 Australia
-                              </h4>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-sm-12">
-                          <div class="single_contact_info">
-                            <div class="single_info_text">
-                              <h3>CALL US</h3>
-                              <h4>+ 880 168 109 1425</h4>
-                              <h4>+ 0216809142</h4>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-sm-12">
-                          <div class="single_contact_info">
-                            <div class="single_info_text">
-                              <h3>EMAIL US</h3>
-                              <h4>contactus@email.com</h4>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-sm-6">
-                  <div class="
-                        single_contant_left
-                        padding-top-90 padding-bottom-90
-                      ">
-                    <form action="#" id="formid">
-                      <div class="
-                            col-lg-8
-                            col-md-8
-                            col-sm-10
-                            col-lg-offset-2
-                            col-md-offset-2
-                            col-sm-offset-1
-                          ">
-                        <div class="row">
-                          <div class="col-sm-12">
-                            <div class="form-group">
-                              <input type="text" class="form-control" name="name" placeholder="First Name"
-                                required="" />
-                            </div>
-                          </div>
-                        </div>
-
-                        <div class="row">
-                          <div class="col-sm-12">
-                            <div class="form-group">
-                              <input type="email" class="form-control" name="email" placeholder="Email" required="" />
-                            </div>
-                          </div>
-                          <div class="col-sm-12">
-                            <div class="form-group">
-                              <input type="text" class="form-control" name="subject" placeholder="Subject"
-                                required="" />
-                            </div>
-                          </div>
-                        </div>
-
-                        <div class="form-group">
-                          <textarea class="form-control" name="message" rows="7" placeholder="Message"></textarea>
-                        </div>
-
-                        <div class="">
-                          <input type="submit" value="SEND MESSAGE" class="btn btn-lg" />
-                        </div>
-                      </div>
-                    </form>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- End of contact section(문의 끝) -->
-
+    <hr />
+    
     <!--Footer section-->
     <section class="footer">
       <div class="container">
@@ -883,7 +792,6 @@
   </div>
 
   <!-- START SCROLL TO TOP  -->
-
   <div class="scrollup">
     <a href="#"><i class="fa fa-chevron-up"></i></a>
   </div>
@@ -900,9 +808,13 @@
   <script src="assets/css/slick/slick.js"></script>
   <script src="assets/css/slick/slick.min.js"></script>
 
+  
   <script src="assets/js/jquery.countdown.min.js"></script>
   <script src="assets/js/plugins.js"></script>
   <script src="assets/js/main.js"></script>
+
+  
+
 </body>
 
 </html>
