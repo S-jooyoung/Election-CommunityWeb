@@ -1,9 +1,6 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
-<!--[if gt IE 8]><!-->
-<html class="no-js" lang="">
+
+<html class="no-js" lang="ko">
 <!--<![endif]-->
 
 <head>
@@ -45,31 +42,31 @@
   <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.8.0/main.min.js'></script>
   <!-- fullcalendar 언어 CDN -->
   <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.8.0/locales-all.min.js'></script>
+  <script src='https://unpkg.com/tooltip.js/dist/umd/tooltip.min.js'></script>
+  <script src="https://unpkg.com/popper.js/dist/umd/popper.min.js"></script>
+  <!-- calendar custom JS-->
+  <script src="assets/js/calendar.js"></script>
+
+  <!-- Swiper -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+
+  <!-- font Awesome-->
+  <script src="https://kit.fontawesome.com/a4196a8ce8.js" crossorigin="anonymous"></script>
+
+  <!-- Chart js-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
 
   
+
+  <style>
+    .fc-day:hover{background: lightblue; cursor: pointer;}
+  </style>
   
-  <script>
-
-    document.addEventListener('DOMContentLoaded', function() {
-      var calendarEl = document.getElementById('calendar');
-      var calendar = new FullCalendar.Calendar(calendarEl, {
-        initialView: 'dayGridMonth',
-
-        events:[
-          {
-            title : '[윤석열] 12시 30분 광화문',
-            start : "2021-12-01",
-            
-          },
-          {
-            title : '[이재명] 12시 20분 동성로 중앙무대',
-            start : "2021-12-03"
-          }
-        ]
-      });
-      calendar.render();
-    });
-  </script>
+  
 </head>
 
 <body data-spy="scroll" data-target=".navbar-collapse">
@@ -143,84 +140,76 @@
               </div>
             </div>
           </div>
-          <div class="scrooldown">
-            <a href="#feature"><i class="fa fa-arrow-down"></i></a>
-          </div>
+          
+
+
+          <!-- Feature section -->
+
+          <div class="container">
+            <div class="row">
+              <div class="main_feature text-center">
+                <div class="col-sm-3">
+                  <div class="single_feature">
+                    <div class="single_feature_icon">
+                      <i class="fa fa-clone"></i>
+                    </div>
+    
+                    <h4>스케줄</h4>
+                    <div class="separator3"></div>
+                    
+                  </div>
+                </div>
+    
+                <div class="col-sm-3">
+                  <div class="single_feature">
+                    <div class="single_feature_icon">
+                      <i class="fa fa-heart-o"></i>
+                    </div>
+    
+                    <h4>공약</h4>
+                    <div class="separator3"></div>
+                    
+                  </div>
+                </div>
+    
+                <div class="col-sm-3">
+                  <div class="single_feature">
+                    <div class="single_feature_icon">
+                      <i class="fa fa-lightbulb-o"></i>
+                    </div>
+                    <h4>비하인드</h4>
+                    <div class="separator3"></div>
+                    
+                  </div>
+                </div>
+    
+                <div class="col-sm-3">
+                  <div class="single_feature">
+                    <div class="single_feature_icon">
+                      <i class="fa fa-comments-o"></i>
+                    </div>
+    
+                    <h4>게시판</h4>
+                    <div class="separator3"></div>
+                    
+                  </div>
+                </div>
+
+                
+            </div>
+
+            <!-- End Feature section -->
+
+
+          
+
+
         </div>
       </div>
     </section>
     <!--End of home section (메인배너 끝) -->
 
-    <!--feature section (서브 메뉴)-->
-    <section id="feature" class="feature sections">
-      <div class="container">
-        <div class="row">
-          <div class="main_feature text-center">
-            <div class="col-sm-3">
-              <div class="single_feature">
-                <div class="single_feature_icon">
-                  <i class="fa fa-clone"></i>
-                </div>
-
-                <h4>스케줄</h4>
-                <div class="separator3"></div>
-                <p>
-                  대통령 후보 스케줄을 한눈에 확인하세요
-
-                </p>
-              </div>
-            </div>
-
-            <div class="col-sm-3">
-              <div class="single_feature">
-                <div class="single_feature_icon">
-                  <i class="fa fa-heart-o"></i>
-                </div>
-
-                <h4>공약</h4>
-                <div class="separator3"></div>
-                <p>
-                  대통령 후보 공약을 한눈에 확인하세요
-                </p>
-              </div>
-            </div>
-
-            <div class="col-sm-3">
-              <div class="single_feature">
-                <div class="single_feature_icon">
-                  <i class="fa fa-lightbulb-o"></i>
-                </div>
-                <h4>비하인드</h4>
-                <div class="separator3"></div>
-                <p>
-                  대통령 후보 비하인드를 한눈에 확인하세요
-                </p>
-              </div>
-            </div>
-
-            <div class="col-sm-3">
-              <div class="single_feature">
-                <div class="single_feature_icon">
-                  <i class="fa fa-comments-o"></i>
-                </div>
-
-                <h4>게시판</h4>
-                <div class="separator3"></div>
-                <p>
-                  여러분의 의견을 마음껏 나누어 보세요
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!--End of container -->
-    </section>
-    <!--End of feature Section (서브 메뉴 끝)-->
-    <hr />
-
-    
-    </style>
+  
     <!-- History section (스케줄)-->
     <section id="history" class="history sections">
       <div class="container">
@@ -241,15 +230,13 @@
     </section>
     <!--End of history  (스케줄 끝) -->
 
-    <hr />
-
-
+    
     <!-- Portfolio section (공약)-->
     <section id="portfolio" class="portfolio sections">
       <div class="container">
         <div class="row">
           <div class="main_portfolio">
-            <div class="col-sm-12">
+            <div class="col-md-12">
               <div class="head_title text-center">
                 <h2>대선 공약</h2>
                 <div class="subtitle">
@@ -274,8 +261,10 @@
                   유승민</button>/
               </div>
             </div>
+          </div>
+        </div>
 
-            <div style="clear: both"></div>
+
             <div id="portfoliowork">
               <div class="single_portfolio tile scale-anm  red ">
                 <img src="assets/images/pf1.jpeg" alt="" />
@@ -348,198 +337,75 @@
                   </div>
                 </a>
               </div>
-
-              <div class="single_portfolio tile scale-anm yellow">
-                <img src="assets/images/pf8.jpeg" alt="" />
-                <a href="assets/images/pf8.jpeg" class="portfolio-img">
-                  <div class="grid_item_overlay">
-                    <div class="separator4"></div>
-                    <h3>자세히보기</h3>
-                    <p>art / t-shirt</p>
-                  </div>
-                </a>
-              </div>
-
-              <div class="single_portfolio tile scale-anm yellow">
-                <img src="assets/images/pf9.jpeg" alt="" />
-                <a href="assets/images/pf9.jpeg" class="portfolio-img">
-                  <div class="grid_item_overlay">
-                    <div class="separator4"></div>
-                    <h3>자세히보기</h3>
-                    <p>art / t-shirt</p>
-                  </div>
-                </a>
-              </div>
-              <div class="single_portfolio tile scale-anm yellow">
-                <img src="assets/images/pf10.jpeg" alt="" />
-                <a href="assets/images/pf10.jpeg" class="portfolio-img">
-                  <div class="grid_item_overlay">
-                    <div class="separator4"></div>
-                    <h3>자세히보기</h3>
-                    <p>art / t-shirt</p>
-                  </div>
-                </a>
-              </div>
             </div>
 
             <div style="clear: both"></div>
-          </div>
-        </div>
       </div>
+        
       <!-- End off container -->
     </section>
     <!-- End off Portfolio Section (공약 끝) -->
 
-    <hr />
-
-    <!-- Counter Section (여분 혹시 몰라서)-->
-    <!--
-    <section id="counter" class="counter">
-      <div class="video_overlay">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-12">
-              <div class="main_counter_area text-center">
-                <div class="row">
-                  <div class="single_counter border_right">
-                    <div class="col-sm-3 col-xs-12">
-                      <div class="single_counter_item">
-                        <i class="icon icon-thumbs-up"></i>
-                        <h2 class="statistic-counter">3891</h2>
-                        <h4 class="">User Favourites</h4>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="single_counter">
-                    <div class="col-sm-3 col-xs-12">
-                      <div class="single_counter_item">
-                        <i class="icon icon-business-3"></i>
-                        <h2 class="statistic-counter">281</h2>
-                        <h4 class="">Posts Last 24 Hours</h4>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="single_counter">
-                    <div class="col-sm-3 col-xs-12">
-                      <div class="single_counter_item">
-                        <i class="icon icon-people-32"></i>
-                        <h2 class="statistic-counter">618</h2>
-                        <h4 class="">Total Posts</h4>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="single_counter">
-                    <div class="col-sm-3 col-xs-12">
-                      <div class="single_counter_item">
-                        <i class="icon icon-cup"></i>
-                        <h2 class="statistic-counter">178</h2>
-                        <h4 class="">Amazing Features</h4>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-    </section>
-    -->
-    <!-- End of counter section -->
+    
+    
 
     <!-- Pricing Section (비하인드) -->
-    <section id="pricing" class="pricing">
+    <section id="pricing" class="pricing sections">
       <div class="container">
-        <div class="row">
-          <div class="main_pricing_area sections">
-            <div class="head_title text-center">
-              <h2>대선 비하인드</h2>
-              <div class="subtitle">
-                대통령 후보님들의 비하인드 스토리를 알아보세요
-              </div>
-              <div class="separator"></div>
-            </div>
-            <!-- End off Head_title -->
-
-            <div class="col-md-4 col-sm-6">
-              <div class="single_pricing pricing_business2">
-                <div class="pricing_head ">
-                  <h3>이재명</h3>
-                  <div class="pricing_price">
-                    <img src="http://info.nec.go.kr/photo_20220309/Gsg1/Hb100138381/gicho/100138381.JPG" alt="">
-
-                  </div>
-                </div>
-
-                <div class="pricing_body">
-                  <ul>
-                    <li>더미데이터입니다</li>
-                    <li>더미데이터입니다</li>
-                    <li>더미데이터입니다</li>
-                    <li>더미데이터입니다</li>
-                  </ul>
-                  <a href="/Behind.html" class="btn btn-md">자세히보기</a>
-                </div>
-              </div>
-            </div>
-            <!-- End off col-md-4 -->
-            <div class="col-md-4 col-sm-6">
-              <div class="single_pricing pricing_business">
-                <div class="pricing_head">
-                  <h3>윤석열</h3>
-                  <div class="pricing_price">
-                    <img src="http://info.nec.go.kr/photo_20220309/Gsg1/Hb100138362/gicho/100138362.JPG" alt="">
-
-                  </div>
-                </div>
-
-                <div class="pricing_body">
-                  <ul>
-                    <li>더미데이터입니다</li>
-                    <li>더미데이터입니다</li>
-                    <li>더미데이터입니다</li>
-                    <li>더미데이터입니다</li>
-                  </ul>
-                  <a href="/Behind.html" class="btn btn-md">자세히보기</a>
-                </div>
-              </div>
-            </div>
-            <!-- End off col-md-4 -->
-            <div class="col-md-4 col-sm-6">
-              <div class="single_pricing pricing_business3">
-                <div class="pricing_head">
-                  <h3>심상정</h3>
-                  <div class="pricing_price">
-                    <img src="http://info.nec.go.kr/photo_20220309/Gsg1/Hb100138383/gicho/100138383.JPG" alt="">
-
-                  </div>
-                </div>
-
-                <div class="pricing_body">
-                  <ul>
-                    <li>더미데이터입니다</li>
-                    <li>더미데이터입니다</li>
-                    <li>더미데이터입니다</li>
-                    <li>더미데이터입니다</li>
-                  </ul>
-                  <a href="https://bootstrapthemes.co" class="btn btn-md">자세히보기</a>
-                </div>
-              </div>
-            </div>
-            <!-- End off col-md-4 -->
+        <div class="pricing-title">
+          <h2>대선 비하인드</h2>
+          <div class="subtitle">
+            대통령 후보님들의 비하인드를 한눈에 찾아보세요
           </div>
         </div>
-        <!-- End off row -->
+        <!-- Swiper -->
+        <div class="swiper mySwiper02" >
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="swiper-slide-gallbox-pic01 galloboxstyle">
+                <a href="#none">
+                  <h2>이재명</h2>
+                  <p>새로운 대한민국<br />이재명은 합니다!</p>
+                </a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="swiper-slide-gallbox-pic02 galloboxstyle">
+                <a href="#none">
+                  <h2>윤석열</h2>
+                  <p>공정과 상식의 나라<br />되찾겠습니다.</p>
+                </a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="swiper-slide-gallbox-pic03 galloboxstyle ">
+                <a href="#none">
+                  <h2>심상정</h2>
+                  <p>
+                    정의로운 복지국가,<br />정의당이 시작합니다
+                  </p>
+                </a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="swiper-slide-gallbox-pic04">
+                <a href="#none">
+                  <h2>국민의당</h2>
+                  <p>말과 행동이 같은 정당</p>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
       </div>
+
       <!-- End off container -->
     </section>
     <!-- End off Pricing Section (비하인드 끝)-->
+    
 
-    <hr />
+
 
     <!-- Team Section (게시판)-->
     <section id="team" class="team">
@@ -556,58 +422,55 @@
               </div>
               <!-- End off Head_title -->
 
-              <div class="main_team">
-                <ul>
-                  <li>
-                    <div class="single_team_img">
-                      <img src="http://info.nec.go.kr/photo_20220309/Gsg1/Hb100138381/gicho/100138381.JPG" alt="" />
-                    </div>
-                    <div class="single_team_text">
-                      <h4>이재명</h4>
-                      <p>바로가기</p>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="single_team_img">
-                      <img src="http://info.nec.go.kr/photo_20220309/Gsg1/Hb100138362/gicho/100138362.JPG" alt="" />
-                    </div>
-                    <div class="single_team_text">
-                      <h4>윤석열</h4>
-                      <p>바로가기</p>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="single_team_img">
-                      <img src="http://info.nec.go.kr/photo_20220309/Gsg1/Hb100138383/gicho/100138383.JPG" alt="" />
-                    </div>
-                    <div class="single_team_text">
-                      <h4>심상정</h4>
-                      <p>바로가기</p>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="single_team_img">
-                      <img
-                        src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTA2MjlfMTEy%2FMDAxNjI0OTI5MTMwNjg1.5MVX6duStz9MAnQjgQvJ8eo8EL9PrEkdzH3Lj2bO8Skg.b08p5IwMkFrlVbPMrTzEdaewHogzvreaDBQkHss9YJsg.PNG.heows10%2Fimage.png&type=sc960_832"
-                        alt="" />
-                    </div>
-                    <div class="single_team_text">
-                      <h4>안철수</h4>
-                      <p>바로가기</p>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="single_team_img">
-                      <img
-                        src="https://search.pstatic.net/common/?src=http%3A%2F%2Fimgnews.naver.net%2Fimage%2F011%2F2021%2F08%2F03%2F0003945468_001_20210803172202535.jpg&type=sc960_832"
-                        alt="" />
-                    </div>
-                    <div class="single_team_text">
-                      <h4>류승민</h4>
-                      <p>바로가기</p>
-                    </div>
-                  </li>
-                </ul>
+              <div class="main_team margin-bottom-400">
+                <div class="desk1">
+                  <div class="bar2">
+                      <h2 class="main_bar2">인기게시물</h2>
+                      <a href="../board/board.html?bbs_code=JS20"><div class="more1" title="더보기"><i class="fas fa-plus fa-2x"></i></div></a>
+                  </div>
+                  <div class="list1">
+                      <ul>
+                          
+                          <a href="../board/board_view.html?num=145975">
+                          <li>
+                              <div class="cont">
+                                  <span class="label">윤석열</span><span class="date">2021.11.30</span><i class="fas fa-chevron-right fa-2x"></i></i><br>
+                                  <h3>정말로 이번에 정권 교체되나?</h3>
+                              </div>
+                          </li>
+                          </a>			
+
+                          <a href="../board/board_view.html?num=145685">
+                          <li>
+                              <div class="cont">
+                                  <span class="label">이재명</span><span class="date">2021.11.15</span><i class="fas fa-chevron-right fa-2x"></i></i><br>
+                                  <h3>종부세 부과전략에 대해서 내생각은..</h3>
+                              </div>
+                          </li>
+                          </a>
+                          
+                          <a href="../board/board_view.html?num=145975">
+                            <li>
+                                <div class="cont">
+                                    <span class="label">심상정</span><span class="date">2021.11.30</span><i class="fas fa-chevron-right fa-2x"></i></i><br>
+                                    <h3>정말로 이번에 정권 교체되나?</h3>
+                                </div>
+                            </li>
+                            </a>
+
+
+                          <a href="../board/board_view.html?num=145676">
+                          <li>
+                              <div class="cont">
+                                  <span class="label">안철수</span><span class="date">2021.11.15</span><i class="fas fa-chevron-right fa-2x"></i><br>
+                                  <h3>이번에야 말로 기회인 이유</h3>
+                              </div>
+                          </li>
+                          </a>			
+
+                      </ul>
+                  </div>
+              </div>
               </div>
             </div>
             <!-- End of main team contant -->
@@ -618,14 +481,14 @@
     </section>
     <!-- End off Team Section(게시판 끝) -->
 
-    <hr />
+    
 
     <!-- Blog Section (투표)-->
     <section id="blog" class="blog">
       <div class="container-fluid">
         <div class="row">
           <div class="main_blog sections">
-            <div class="head_title text-center">
+            <div class="head_title text-center margin-top-20">
               <h2>대선 투표</h2>
               <div class="subtitle">
                 여러분들의 꿈을 투표 하세요
@@ -633,128 +496,45 @@
               <div class="separator"></div>
             </div>
             <!-- End off Head_title -->
-
-            <div class="main_blog_content">
-              <div class="col-sm-6">
-                <div class="single_blog_area textwhite">
-                  <div class="row">
-                    <div class="col-sm-6 no-padding">
-                      <div class="single_blog_img">
-                        <img src="assets/images/blog1.jpg" alt="" />
-                      </div>
-                    </div>
-                    <div class="col-sm-6 no-padding">
-                      <div class="single_blog_text s_b_left">
-                        <p>art/t-shirt</p>
-                        <h3>T-SHIRT DESIGN</h3>
-                        <div class="separator2"></div>
-                        <p>
-                          Lorem Ipsum is simply dummy text of the printing and
-                          typesetting industry. Lorem Ipsum has been the indu
-                          Stry's standard dummy text ever since the 1500s, an
-                          unknown printer took a galley of type a scrambled it
-                          to make a type specimen book.
-                        </p>
-
-                        <a href="" class="read_more">Read More >></a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-sm-6">
-                <div class="single_blog_area textwhite">
-                  <div class="row">
-                    <div class="col-sm-6 no-padding">
-                      <div class="single_blog_img">
-                        <img src="assets/images/blog2.jpg" alt="" />
-                      </div>
-                    </div>
-                    <div class="col-sm-6 no-padding">
-                      <div class="single_blog_text s_b_left">
-                        <p>art/t-shirt</p>
-                        <h3>T-SHIRT DESIGN</h3>
-                        <div class="separator2"></div>
-                        <p>
-                          Lorem Ipsum is simply dummy text of the printing and
-                          typesetting industry. Lorem Ipsum has been the indu
-                          Stry's standard dummy text ever since the 1500s, an
-                          unknown printer took a galley of type a scrambled it
-                          to make a type specimen book.
-                        </p>
-
-                        <a href="" class="read_more">Read More >></a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-sm-6">
-                <div class="single_blog_area textwhite">
-                  <div class="row">
-                    <div class="col-sm-6 col-sm-push-6 no-padding">
-                      <div class="single_blog_img">
-                        <img src="assets/images/blog3.jpg" alt="" />
-                      </div>
-                    </div>
-
-                    <div class="col-sm-6 col-sm-pull-6 no-padding">
-                      <div class="single_blog_text s_b_right">
-                        <p>art/t-shirt</p>
-                        <h3>T-SHIRT DESIGN</h3>
-                        <div class="separator2"></div>
-                        <p>
-                          Lorem Ipsum is simply dummy text of the printing and
-                          typesetting industry. Lorem Ipsum has been the indu
-                          Stry's standard dummy text ever since the 1500s, an
-                          unknown printer took a galley of type a scrambled it
-                          to make a type specimen book.
-                        </p>
-
-                        <a href="" class="read_more">Read More >></a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-sm-6">
-                <div class="single_blog_area textwhite">
-                  <div class="row">
-                    <div class="col-sm-6 col-sm-push-6 no-padding">
-                      <div class="single_blog_img">
-                        <img src="assets/images/blog4.jpg" alt="" />
-                      </div>
-                    </div>
-                    <div class="col-sm-6 col-sm-pull-6 no-padding">
-                      <div class="single_blog_text s_b_right">
-                        <p>art/t-shirt</p>
-                        <h3>T-SHIRT DESIGN</h3>
-                        <div class="separator2"></div>
-                        <p>
-                          Lorem Ipsum is simply dummy text of the printing and
-                          typesetting industry. Lorem Ipsum has been the indu
-                          Stry's standard dummy text ever since the 1500s, an
-                          unknown printer took a galley of type a scrambled it
-                          to make a type specimen book.
-                        </p>
-
-                        <a href="" class="read_more">Read More >></a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+            <div class="work_menu text-center">
+              <div id="filters" class="toolbar mb2 mt2">
+                <button class="btn-md fil-cat filter active" data-filter="all">
+                  ALL</button>/
+                <button class="btn-md fil-cat filter"  data-filter=".blue">
+                  10~20대</button>/
+                <button class="btn-md fil-cat filter"  data-filter=".red">
+                  30~40대</button>/
+                <button class="btn-md fil-cat filter"  data-filter=".yellow">
+                  50~60대</button>/
+                <button class="btn-md fil-cat filter"  data-filter=".bcards">
+                  70~80대</button>/
               </div>
             </div>
+
+            <div id="chartview" class="chartview" >
+              <!--차트가 그려질 부분-->
+              <canvas id="myChart"></canvas>
+            </div>
+
+            <a href="../board/board.html?bbs_code=JS20">
+              <div class="votelink" title="투표하기">
+                <span class="label">투표하기</span>
+              </div>
+            </a>
+              
+            </div>
+
+            
+
+            
           </div>
         </div>
-      </div>
+      
       <!-- End off container -->
     </section>
     <!-- End off Blog Section(투표 끝) -->
 
-    <hr />
+    
     
     <!--Footer section-->
     <section class="footer">
@@ -812,6 +592,100 @@
   <script src="assets/js/jquery.countdown.min.js"></script>
   <script src="assets/js/plugins.js"></script>
   <script src="assets/js/main.js"></script>
+
+
+
+
+
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper02", {
+        slidesPerView: 2,
+        spaceBetween: 30,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        breakpoints: {
+            310: {
+                slidesPerView: 1,
+                spaceBetween: 0,
+            },
+            721: {
+                slidesPerView: 2,
+                spaceBetween: 40,
+            },
+            1025: {
+                slidesPerView: 3,
+                spaceBetween: 50,
+            },
+        },
+    });
+</script>
+
+
+<!-- JavaScript for BarChart-->
+<script type="text/javascript">
+  var context = document
+      .getElementById('myChart')
+      .getContext('2d');
+  var myChart = new Chart(context, {
+      type: 'bar', // 차트의 형태
+      data: { // 차트에 들어갈 데이터
+          labels: [
+              //x 축
+              '이재명','윤석열','심상정','안철수'
+          ],
+          datasets: [
+              { //데이터
+                  label: '모의 투표', //차트 제목
+                  fill: false, // line 형태일 때, 선 안쪽을 채우는지 안채우는지
+                  data: [
+                      15,42,25,20 //x축 label에 대응되는 데이터 값
+                  ],
+                  backgroundColor: [
+                      //색상
+                      'rgba(54, 162, 235, 0.2)',
+                      'rgba(255, 99, 132, 0.2)',
+                      'rgba(255, 206, 86, 0.2)',
+                      'rgba(75, 192, 192, 0.2)',
+                      
+                  ],
+                  borderColor: [
+                      //경계선 색상
+                      'rgba(54, 162, 235, 1)',
+                      'rgba(255, 99, 132, 1)',
+                      'rgba(255, 206, 86, 1)',
+                      'rgba(75, 192, 192, 1)',
+                      
+                  ],
+                  borderWidth: 2 //경계선 굵기
+              }/* ,
+              {
+                  label: 'test2',
+                  fill: false,
+                  data: [
+                      8, 34, 12, 24
+                  ],
+                  backgroundColor: 'rgb(157, 109, 12)',
+                  borderColor: 'rgb(157, 109, 12)'
+              } */
+          ]
+      },
+      options: {
+          scales: {
+              yAxes: [
+                  {
+                      ticks: {
+                          beginAtZero: true
+                      }
+                  }
+              ]
+          }
+      }
+  });
+</script>
 
   
 
