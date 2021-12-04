@@ -161,7 +161,7 @@ $(document).on("scroll", function () {
 
 
 $('#countdown').countdown({
-	date: "Mar 9 2022",
+	date: "Dec 16 2021",
 	render: function(data) {
 	  var el = $(this.el);
 	  el.empty()
@@ -172,3 +172,11 @@ $('#countdown').countdown({
 	    .append("<div>" + this.leadingZeros(data.sec, 2) + " <span>sec</span></div>");
 	}
 });
+
+//---------------------------------------------
+// Callender
+//---------------------------------------------
+
+
+
+
